@@ -18,4 +18,4 @@ pdfs:	clean $(PDFS)
 	pandoc -V papersize:a4 -V geometry:margin=1.2cm -o $@ $<
 
 clean:
-	rm -f *.pdf
+	rm -f $(SRC:.md=_small_margin.pdf) $(SRC:.md=.pdf)
